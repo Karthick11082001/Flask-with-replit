@@ -2,45 +2,31 @@
 <html>
   <head>
     <title>FLASK </title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
-      h1{
-        font-size: 40px;
-        font-family: roboto;
-        color: rgb(200,200,20);
-        text-align: center;
-      }
-      #banner{
-        width:100%;
-        height: 200px;
-      }
-      h2{
-        font-size:40px;
-        font-family: roboto;
-        color: rgb(200,200,20);
-        text-align: center;
-        
-      }
-      p{        font-size:20px;
-        font-family: roboto;
-        text-align: center;
-        
-      }
-      #contain{
-        max-width:720px;
-        margin: 0 auto 0 auto;
-      }
-    </style>
+    #banner{
+    height:300px;
+      object-fit: cover;
+    width:80%
+    }
+      </style>
   </head>
   <body>
-    <div id="contain">
-    <h1>Flask tutorial</h1> 
-    <img id="banner" src="https://flask-with-replit.karthick562.repl.co/static/flaskbanner.jpg">
-    <h2>Python for beginners</h2>
-    <p>Using absolute or relative positioning: This allows you to position an image at a specific location on the page, either relative to its container or to the entire page. Here's an example:</p>
-    <h2>open positions</h2> 
-    <p>todo - show the jobs here</p>
-      <div style= "text-align:center">
-    <button>next</button>
+    <div class="container" >
+    <h1 class="text-center mt-2 mb-4">Careers</h1> 
+    <img  id="banner" src="https://flask-with-replit.karthick562.repl.co/static/download (1).jpg" class="img-fluid">
+    <h2 class="text-center">For freshers</h2>
+    <p class="lead">Using absolute or relative positioning: This allows you to position an image at a specific location on the page, either relative to its container or to the entire page. Here's an example:</p>
+    <h2 class="text-center">open positions</h2> 
+    <div>
+      {% for job in jobs%}
+       {%include 'job.html'%}
+      {%endfor%}
+    </div>
+      <div class="text-center">
+    <button type="button" class="btn btn-success btn-lg">contact us</button>
       </div>
     </div>
   </body>
